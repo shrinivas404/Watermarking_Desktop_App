@@ -17,13 +17,19 @@ def watermark_my_image():
     image.show()
     image.save(f"{edited_image_name.get()}.jpg")
 
+# Label
+watermark_label = Label(text="Enter watermark text.")
+watermark_label.grid(row=0, column=1, padx=20)
+
+edited_image_name = Label(text="Enter edited image name.")
+edited_image_name.grid(row=1, column=1)
 # Entry
 text_entry = Entry(width=40)
 text_entry.grid(row=0, column=0, padx=20, pady=20)
 
 # buttons
-watermark_button = Button(text="Watermark", padx=10, pady=10, command=watermark_my_image)
-watermark_button.grid(row=0, column=1)
+watermark_button = Button(text="Watermark my image", padx=10, pady=10, command=watermark_my_image)
+watermark_button.grid(row=2, column=0, columnspan=2, pady=20)
 
 edited_image_name = Entry(width=40)
 edited_image_name.grid(row=1, column=0, padx=20, pady=30)
